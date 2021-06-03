@@ -1,4 +1,3 @@
-bitcoin-cli=/usr/local/bin/bitcoin-cli
 bitcoin-datadir=(Created bitcoin directory)
 bitcoin-rpcuser=(rpc user which must be added to bitcoin server instance configs as well)
 bitcoin-rpcpassword=(rpc password which must be added to bitcoin server instance configs as well)
