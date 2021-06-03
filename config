@@ -1,0 +1,7 @@
+bitcoin-cli=/usr/local/bin/bitcoin-cli
+bitcoin-datadir=(Created bitcoin directory)
+bitcoin-rpcuser=(rpc user which must be added to bitcoin server instance configs as well)
+bitcoin-rpcpassword=(rpc password which must be added to bitcoin server instance configs as well)
+bitcoin-rpcconnect=<internal ip address for bitcoin server instance>
+bitcoin-rpcport=8332
+wallet=postgres://<username>:<password>@<sql instance ip address>:5432/<dbname>(Connection string to connect to the database created on GCP)
