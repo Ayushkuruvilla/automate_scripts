@@ -9,6 +9,10 @@ make
 sudo make install
 cd ..
 mkdir .bitcoin
-mv /home/ayush/automate_scripts/bconfig /home/ayush/.bitcoin
+mv /home/ayush/automate_scripts/bconfig /home/ayush/.bitcoin/
 mkdir .lightning
-mv /home/ayush/automate_scripts/config /home/ayush/.lightning
+mv /home/ayush/automate_scripts/config /home/ayush/.lightning/
+mkdir .lightning/testnet
+touch .lightning/testnet/se.txt
+gcloud secrets versions access 1 --secret="my-secret" >> se.txt
+gcloud secrets versions access 1 --secret="my-secret" >> .lightning/config
