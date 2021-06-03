@@ -14,5 +14,7 @@ mkdir .lightning
 mv /home/ayush/automate_scripts/config /home/ayush/.lightning/
 mkdir .lightning/testnet
 touch .lightning/testnet/se.txt
-gcloud secrets versions access 1 --secret="my-secret" >> se.txt
-gcloud secrets versions access 1 --secret="my-secret" >> .lightning/config
+gcloud secrets versions access 1 --secret="my-secret" >> .lightning/testnet/se.txt
+gcloud secrets versions access 1 --secret="my-secwal" >> .lightning/config
+xxd -r .lightning/testnet/se.txt > .lightning/testnet/hsm_secret
+chmod 0400 .lightning/testnet/hsm_secret
