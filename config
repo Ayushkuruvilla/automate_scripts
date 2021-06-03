@@ -1,3 +1,8 @@
+network=testnet
+log-level=debug
+bind-addr=<Internal ip address>:9735(Default port)
+announce-addr=<public ip address>:9735(default port)
+
 bitcoin-datadir=(Created bitcoin directory)
 bitcoin-rpcuser=(rpc user which must be added to bitcoin server instance configs as well)
 bitcoin-rpcpassword=(rpc password which must be added to bitcoin server instance configs as well)
