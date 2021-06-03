@@ -1,5 +1,5 @@
 sudo apt-get update
-sudo apt-get install -y autoconf automake build-essential git libtool libgmp-dev libsqlite3->
+sudo apt-get install -y autoconf automake build-essential git libtool libgmp-dev libsqlite3-dev python3 python3-mako net-tools zlib1g-dev libsodium-dev gettext
 git clone https://github.com/ElementsProject/lightning.git
 cd lightning
 sudo apt-get install -y valgrind python3-pip libpq-dev
