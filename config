@@ -1,11 +1,7 @@
 network=testnet
 log-level=debug
-bind-addr=<Internal ip address>:9735(Default port)
-announce-addr=<public ip address>:9735(default port)
-
-bitcoin-datadir=(Created bitcoin directory)
-bitcoin-rpcuser=(rpc user which must be added to bitcoin server instance configs as well)
-bitcoin-rpcpassword=(rpc password which must be added to bitcoin server instance configs as well)
-bitcoin-rpcconnect=<internal ip address for bitcoin server instance>
+bitcoin-datadir=/home/ayush/.bitcoin
+bitcoin-rpcuser=bitcoin
+bitcoin-rpcpassword=wQEYAU6bV5rKRYC
+bitcoin-rpcconnect=10.128.0.3
 bitcoin-rpcport=8332
-wallet=postgres://<username>:<password>@<sql instance ip address>:5432/<dbname>(Connection string to connect to the database created on GCP)
