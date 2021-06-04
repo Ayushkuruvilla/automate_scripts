@@ -3,4 +3,4 @@ testnet=1
 rpcconnect=10.128.0.3
 rpcport=8332
 rpcuser=bitcoin
-rpcpassword=wQEYAU6bV5rKRYC 
+rpcpassword=wQEYAU6bV5rKRYC
