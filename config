@@ -1,5 +1,6 @@
 network=testnet
 log-level=debug
+log-file=lightning.log
 bitcoin-datadir=/home/ayush/.bitcoin
 bitcoin-rpcuser=bitcoin
 bitcoin-rpcpassword=wQEYAU6bV5rKRYC
