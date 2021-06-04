@@ -13,20 +13,23 @@ sudo pip3 install -r requirements.txt
 make
 sudo make install
 cd ..
-mkdir .bitcoin
-git clone https://github.com/Ayushkuruvilla/automate_scripts.git
-mv /home/ayush/automate_scripts/bconfig /home/ayush/.bitcoin/config
-mkdir .lightning
-mv /home/ayush/automate_scripts/config /home/ayush/.lightning/
+shopt -s expand_aliases
+alias sud='sudo -u ayush'
+sud mkdir .bitcoin
+sud git clone https://github.com/Ayushkuruvilla/automate_scripts.git
+sud mv /home/ayush/automate_scripts/bconfig /home/ayush/.bitcoin/config
+sud mkdir .lightning
+sud mv /home/ayush/automate_scripts/config /home/ayush/.lightning/
 pub=$(dig +short myip.opendns.com @resolver1.opendns.com)
 internal=$(hostname -I | awk '{print $1}')
 var3="bind-addr="$internal":9735"
 var4="announce-addr="$pub":9735"
-echo $var3 >> .lightning/config
-echo $var4 >> .lightning/config
-mkdir .lightning/testnet
-touch .lightning/testnet/se.txt
-gcloud secrets versions access 1 --secret="my-secret" >> .lightning/testnet/se.txt
-gcloud secrets versions access 1 --secret="my-secwal" >> .lightning/config
-xxd -r .lightning/testnet/se.txt > .lightning/testnet/hsm_secret
-chmod 0400 .lightning/testnet/hsm_secret
+sud echo $var3 >> .lightning/config
+sud echo $var4 >> .lightning/config
+sud mkdir .lightning/testnet
+sud touch .lightning/testnet/se.txt
+sud gcloud secrets versions access 1 --secret="my-secret" >> .lightning/testnet/se.txt
+sud gcloud secrets versions access 1 --secret="my-secwal" >> .lightning/config
+sud xxd -r .lightning/testnet/se.txt > .lightning/testnet/hsm_secret
+sud chmod 0400 .lightning/testnet/hsm_secret
+sud lightningd --daemon
