@@ -1,6 +1,6 @@
 testnet=1
 [test]
-rpcconnect=<internal ip address for bitcoin server instance>
+rpcconnect=10.128.0.3
 rpcport=8332
-rpcuser=(rpc user which must be added to bitcoin server instance configs as well)
-rpcpassword=(rpc password which must be added to bitcoin server instance configs as well) 
+rpcuser=bitcoin
+rpcpassword=wQEYAU6bV5rKRYC 
